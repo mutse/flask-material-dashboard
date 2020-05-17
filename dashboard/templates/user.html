@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% import 'macro' as macro %}
 
 {% block title %}Material Dashboard{% endblock %}
 
@@ -93,7 +94,7 @@
                 </div>
               </div>
             </div-->
-            <div class="col-md-8">
+            <div class="col-md-4">
               <div class="card card-profile">
                 <div class="card-avatar">
                   <a href="javascript:;">
@@ -108,20 +109,40 @@
                   </p>
                   <div class="row">
                     <div class="col-md-4">
-                      <a class="card card-label">This is a label</a>
+                      <a class="card card-label" style="background-color: #00ff00;">This is a label1</a>
                     </div>
                     <div class="col-md-4">
-                      <a class="card card-label">This is a label</a>
+                      <a class="card card-label" style="background-color: #9c27b0; color: #ffffff;">This is a label2</a>
                     </div>
                     <div class="col-md-4">
-                      <a class="card card-label">This is a label</a>
+                      <a class="card card-label" style="background-color: #ff0000;">This is a label3</a>
                     </div>
                     <div class="col-md-4">
-                      <a class="card card-label">This is a label</a>
+                      <a class="card card-label" style="background-color: #ff0f00;">This is a label4</a>
                     </div>
                   </div>
                   <!--a href="javascript:;" class="btn btn-primary btn-round">Follow</a-->
                 </div>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="card">
+                <div id="pie" style="width:600px; height:510px;"></div>
+                <script>
+                $(
+                function () {
+                  var chart = echarts.init(document.getElementById('pie'), 'white', {renderer: 'canvas'});
+                  $.ajax({
+                    type: "GET",
+                    url: "http://127.0.0.1:5000/pie",
+                    dataType: 'json',
+                    success: function (result) {
+                        chart.setOption(result);
+                    }
+                  });
+                }
+              )
+              </script>
               </div>
             </div>
           </div>
