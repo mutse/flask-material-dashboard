@@ -23,12 +23,30 @@
                         </tr>
                       </thead>
                       <tbody>
+                        {% for item in items %}
                         <tr>
-                          <td>Components</td>
-                          <td class="text-center">60</td>
-                          <td class="text-center">200</td>
+                          <td>{{ item.title }}</td>
+                          <td class="text-center">
+                            {% if item.free == 'danger' %}
+                            <i class="fa fa-times text-danger"></i>
+                            {% elif item.free == 'success' %}
+                            <i class="fa fa-check text-success"></i>
+                            {% else %}
+                            {{ item.free }}
+                            {% endif %}
+                          </td>
+                          <td class="text-center">
+                            {% if item.pro == 'danger' %}
+                            <i class="fa fa-times text-danger"></i>
+                            {% elif item.pro == 'success' %}
+                            <i class="fa fa-check text-success"></i>
+                            {% else %}
+                            {{ item.pro }}
+                            {% endif %}
+                          </td>
                         </tr>
-                        <tr>
+                        {% endfor %}
+                        <!--tr>
                           <td>Plugins</td>
                           <td class="text-center">2</td>
                           <td class="text-center">15</td>
@@ -62,7 +80,7 @@
                           <td></td>
                           <td class="text-center">Free</td>
                           <td class="text-center">Just $49</td>
-                        </tr>
+                        </tr-->
                         <tr>
                           <td class="text-center"></td>
                           <td class="text-center">

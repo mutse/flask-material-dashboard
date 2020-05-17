@@ -7,31 +7,31 @@
           <li class="nav-item {% if request.endpoint == 'index' %}active{% endif %} ">
             <a class="nav-link" href="{{ url_for('index') }}">
               <i class="material-icons">dashboard</i>
-              <p>Dashboard</p>
+              <p>{{ _("Dashboard") }}</p>
             </a>
           </li>
           <li class="nav-item {% if request.endpoint == 'user' %}active {% endif %}">
             <a class="nav-link" href="{{ url_for('user') }}">
               <i class="material-icons">person</i>
-              <p>User Profile</p>
+              <p>{{ _("User Profile") }}</p>
             </a>
           </li>
           <li class="nav-item {% if request.endpoint == 'tables' %}active{% endif %}">
             <a class="nav-link" href="{{ url_for('tables') }}">
               <i class="material-icons">content_paste</i>
-              <p>Table List</p>
+              <p>{{ _("Table List") }}</p>
             </a>
           </li>
           <li class="nav-item {% if request.endpoint == 'typography' %}active{% endif %}">
             <a class="nav-link" href="{{ url_for('typography') }}">
               <i class="material-icons">library_books</i>
-              <p>Typography</p>
+              <p>{{ _("Typography") }}</p>
             </a>
           </li>
           <li class="nav-item {% if request.endpoint == 'icons' %}active{% endif %}">
             <a class="nav-link" href="{{ url_for('icons') }}">
               <i class="material-icons">bubble_chart</i>
-              <p>Icons</p>
+              <p>{{ _("Icons") }}</p>
             </a>
           </li>
           <!--li class="nav-item ">
@@ -43,19 +43,19 @@
           <li class="nav-item {% if request.endpoint == 'notifications' %}active{% endif %}">
             <a class="nav-link" href="{{ url_for('notifications') }}">
               <i class="material-icons">notifications</i>
-              <p>Notifications</p>
+              <p>{{ _("Notifications") }}</p>
             </a>
           </li>
           <li class="nav-item {% if request.endpoint == 'rtl' %}active{% endif %}">
             <a class="nav-link" href="{{ url_for('rtl') }}">
               <i class="material-icons">language</i>
-              <p>RTL Support</p>
+              <p>{{ _("RTL Support") }}</p>
             </a>
           </li>
           <li class="nav-item {% if request.endpoint == 'upgrade' %}active-pro{% endif %} ">
             <a class="nav-link" href="{{ url_for('upgrade') }}">
               <i class="material-icons">unarchive</i>
-              <p>Upgrade to PRO</p>
+              <p>{{ _("Upgrade to PRO") }}</p>
             </a>
           </li>
         </ul>

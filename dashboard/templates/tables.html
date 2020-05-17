@@ -16,41 +16,23 @@
                   <div class="table-responsive">
                     <table class="table">
                       <thead class=" text-primary">
-                        <th>
-                          ID
-                        </th>
-                        <th>
-                          Name
-                        </th>
-                        <th>
-                          Country
-                        </th>
-                        <th>
-                          City
-                        </th>
-                        <th>
-                          Salary
-                        </th>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Country</th>
+                        <th>City</th>
+                        <th>Salary</th>
                       </thead>
                       <tbody>
+                        {% for data in employees %}
                         <tr>
-                          <td>
-                            1
-                          </td>
-                          <td>
-                            Dakota Rice
-                          </td>
-                          <td>
-                            Niger
-                          </td>
-                          <td>
-                            Oud-Turnhout
-                          </td>
-                          <td class="text-primary">
-                            $36,738
-                          </td>
+                          <td>{{ data.id }}</td>
+                          <td>{{ data.name }}</td>
+                          <td>{{ data.country }}</td>
+                          <td>{{ data.city }}</td>
+                          <td class="text-primary">${{ data.salary }}</td>
                         </tr>
-                        <tr>
+                        {% endfor %}
+                        <!--tr>
                           <td>
                             2
                           </td>
@@ -134,14 +116,14 @@
                           <td class="text-primary">
                             $78,615
                           </td>
-                        </tr>
+                        </tr-->
                       </tbody>
                     </table>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-12">
+            <!--div class="col-md-12">
               <div class="card card-plain">
                 <div class="card-header card-header-primary">
                   <h4 class="card-title mt-0"> Table on Plain Background</h4>
@@ -275,7 +257,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div-->
           </div>
         </div>
       </div>
